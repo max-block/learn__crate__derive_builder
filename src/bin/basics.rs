@@ -1,17 +1,16 @@
 use derive_builder::Builder;
 
 #[derive(Debug, Builder, Default)]
+#[builder(setter(into))]
 struct Client {
-    #[builder(setter(into), default = "\"sdf\".into()")]
+    #[builder(default = "\"sdf\".into()")]
     base_url: String,
 
-    #[builder(setter(into), default)]
+    #[builder(default)]
     proxy: Option<String>,
 
-    #[builder(setter(into))]
     api_key: String,
 
-    #[builder(setter(into))]
     api_secret: String,
 }
 
