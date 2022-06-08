@@ -1,5 +1,6 @@
 use derive_builder::Builder;
 
+#[allow(dead_code)]
 #[derive(Debug, Builder)]
 #[builder(setter(into))]
 struct Client {
